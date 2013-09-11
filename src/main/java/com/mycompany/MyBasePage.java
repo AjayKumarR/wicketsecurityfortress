@@ -7,7 +7,6 @@ import org.apache.log4j.Logger;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
-import org.apache.wicket.request.http.handler.RedirectRequestHandler;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 import us.jts.fortress.AccessMgr;
 import us.jts.fortress.rbac.Permission;
@@ -48,7 +47,6 @@ public abstract class MyBasePage extends WebPage
                 servletReq.getSession().invalidate();
                 getSession().invalidate();
                 setResponsePage(LoginPage.class);
-                //getRequestCycle().scheduleRequestHandlerAfterCurrent(new RedirectRequestHandler("/login/login.html"));
             }
         };
         add( actionLink );
@@ -56,10 +54,11 @@ public abstract class MyBasePage extends WebPage
         HttpServletRequest servletReq = ( HttpServletRequest ) getRequest().getContainerRequest();
         Principal principal = servletReq.getUserPrincipal();
         boolean isLoggedIn = principal != null;
+
         // Is this a Java EE secured page && has the User successfully authenticated already?
         if ( isLoggedIn )
         {
-            // TODO: make sure this is both necessary & thread safe:
+            // TODO: make sure this is necessary:
             synchronized ( ( RbacSession ) RbacSession.get() )
             {
                 if ( GlobalUtils.getRbacSession( this ) == null )

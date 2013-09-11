@@ -38,16 +38,11 @@ public class WicketApplication extends WebApplication
 	public void init()
 	{
 		super.init();
-
 		// add your configuration here
         getComponentInstantiationListeners().add(new SpringComponentInjector(this));
         getMarkupSettings().setStripWicketTags(true);
         mountPage("index.html", LaunchPage.class);
         mountPage("home.html", LaunchPage.class);
         mountPage("/", LaunchPage.class);
-        //mountPage("/login/login.html", LaunchPage.class);
-        //mountPage("/login/j_security_check", LaunchPage.class);
-
-        //mountPage("/", getHomePage());
 	}
 }

@@ -29,6 +29,10 @@ public class GlobalUtils
     private static final Logger LOG = Logger.getLogger( GlobalUtils.class.getName() );
     public static final String WINDOW_LOCATION_REPLACE_LOGIN_LOGIN_HTML = "window.location.replace(\"/login/login.html\");";
 
+    public static final String BUTTON1 = "Button1";
+    public static final String BUTTON2 = "Button2";
+    public static final String BUTTON3 = "Button3";
+
     public static Session getRbacSession( Component component )
     {
         return ( ( RbacSession ) component.getSession() ).getRbacSession();

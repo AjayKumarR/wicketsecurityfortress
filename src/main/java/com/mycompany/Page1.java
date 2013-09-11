@@ -22,13 +22,16 @@ public class Page1 extends MyBasePage
 
     public class Page1Form extends Form
     {
+
+        private static final String PAGE1 = "Page1";
+
         public Page1Form( String id )
         {
             super( id );
 
             add(new Label("label1", "If you see this page, ROLE_TEST1 is activated within your session"));
 
-            add( new SecureIndicatingAjaxButton( "page1.button1", "Page1", "Button1" )
+            add( new SecureIndicatingAjaxButton( "page1.button1", PAGE1, GlobalUtils.BUTTON1 )
             {
                 @Override
                 protected void onSubmit( AjaxRequestTarget target, Form form )
@@ -55,7 +58,7 @@ public class Page1 extends MyBasePage
                     attributes.getAjaxCallListeners().add( ajaxCallListener );
                 }
             } );
-            add( new SecureIndicatingAjaxButton( "page1.button2", "Page1", "Button2" )
+            add( new SecureIndicatingAjaxButton( "page1.button2", PAGE1, GlobalUtils.BUTTON2 )
             {
                 @Override
                 protected void onSubmit( AjaxRequestTarget target, Form form )
@@ -82,7 +85,7 @@ public class Page1 extends MyBasePage
                     attributes.getAjaxCallListeners().add( ajaxCallListener );
                 }
             } );
-            add( new SecureIndicatingAjaxButton( "page1.button3", "Page1", "Button3" )
+            add( new SecureIndicatingAjaxButton( "page1.button3", PAGE1, GlobalUtils.BUTTON3 )
             {
                 @Override
                 protected void onSubmit( AjaxRequestTarget target, Form form )
