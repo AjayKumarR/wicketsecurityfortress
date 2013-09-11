@@ -9,21 +9,21 @@ ________________________________________________________________________________
 ###################################################################################
 1. Internet access to retrieve dependencies from online Maven repo.
 2. Java SDK Version 7 or beyond installed to target environment
-3. Fortress, Sentry, Apache Tomcat and Sentry installed (instructions follow)
+3. Fortress, Sentry, Apache Ant, Maven, Tomcat and Sentry installed (instructions follow)
 ___________________________________________________________________________________
 ###################################################################################
 # Section 0: Instructions for installing Fortress and configuring Tomcat to use it for container security
 ###################################################################################
-Note: This demo uses Apache Tomcat, Maven, Ant, OpenLDAP and Fortress Realm (called Sentry) for building and maintaining
+Note: This demo uses Apache Tomcat, Maven, Ant, OpenLDAP and Fortress Realm to download, build and configure
 target environment.  All of these dependencies (and more) will be installed to your machine after successful completion
 of this section.
 
 1. Download one of the Fortress Quickstart package for Linux from here: http://iamfortress.org/download
 *** Note: For this demo you must choose one of the four linux packages as the windows quickstart does not include Tomcat server.
 
-2. Follow these steps: http://www.jts.us/iamfortress/guides/README-QUICKSTART.html.
+2. Follow these steps: http://www.jts.us/iamfortress/guides/README-QUICKSTART.html:
 
-*** Note: This guide can also be found in root of Fortress Quickstart download package.
+*** Note: This guide also in root of Fortress Quickstart download package.
 
 Perform Steps I, II, III and IX (only)
 I. Instructions to extract and configure Fortress Builder Package to Target System
@@ -32,7 +32,7 @@ III. Instructions to run the Builder to Install Symas OpenLDAP, configure and lo
 IX. Instructions to install Commander Web UI Demo
 
 ***
-Note: After completing Step IX from the README-QUICKSTART.html Fortress' RBAC Web administration UI will be deployed to Tomcat.
+Note: After completing Step IX above Fortress' Web administration UI will be deployed to Tomcat.
 To use Admin UI:  http://localhost:8080/commander
 at the login prompt enter: test/test
 ***
