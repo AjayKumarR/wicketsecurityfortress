@@ -4,13 +4,108 @@
 package com.mycompany;
 
 
+import org.apache.wicket.Component;
+import org.apache.wicket.ajax.AjaxRequestTarget;
+import org.apache.wicket.ajax.attributes.AjaxCallListener;
+import org.apache.wicket.ajax.attributes.AjaxRequestAttributes;
 import org.apache.wicket.markup.html.basic.Label;
+import org.apache.wicket.markup.html.form.Form;
 
 
 public class Page3 extends MyBasePage
 {
     public Page3()
     {
-        add(new Label("label3", "This is Page3"));
+        add( new Page3Form( "pageForm" ) );
+    }
+    public class Page3Form extends Form
+    {
+        public Page3Form( String id )
+        {
+            super( id );
+            add(new Label("label3", "This is Page3.  If you see it, ROLE_TEST1 &/or ROLE_TEST3 is activated within your session"));
+            add( new SecureIndicatingAjaxButton( "page3.button1", "Page3", "Button1" )
+            {
+                @Override
+                protected void onSubmit( AjaxRequestTarget target, Form form )
+                {
+                    info( "Button1 Pressed" );
+                }
+                @Override
+                public void onError( AjaxRequestTarget target, Form form )
+                {
+                    System.out.println( "page3.button1" );
+                }
+                @Override
+                protected void updateAjaxAttributes( AjaxRequestAttributes attributes )
+                {
+                    super.updateAjaxAttributes( attributes );
+                    AjaxCallListener ajaxCallListener = new AjaxCallListener()
+                    {
+                        @Override
+                        public CharSequence getFailureHandler( Component component )
+                        {
+                            return GlobalUtils.WINDOW_LOCATION_REPLACE_LOGIN_LOGIN_HTML;
+                        }
+                    };
+                    attributes.getAjaxCallListeners().add( ajaxCallListener );
+                }
+            } );
+            add( new SecureIndicatingAjaxButton( "page3.button2", "Page3", "Button2" )
+            {
+                @Override
+                protected void onSubmit( AjaxRequestTarget target, Form form )
+                {
+                    info( "Button2 Pressed" );
+                }
+                @Override
+                public void onError( AjaxRequestTarget target, Form form )
+                {
+                    System.out.println( "page3.button2.onError" );
+                }
+                @Override
+                protected void updateAjaxAttributes( AjaxRequestAttributes attributes )
+                {
+                    super.updateAjaxAttributes( attributes );
+                    AjaxCallListener ajaxCallListener = new AjaxCallListener()
+                    {
+                        @Override
+                        public CharSequence getFailureHandler( Component component )
+                        {
+                            return GlobalUtils.WINDOW_LOCATION_REPLACE_LOGIN_LOGIN_HTML;
+                        }
+                    };
+                    attributes.getAjaxCallListeners().add( ajaxCallListener );
+                }
+            } );
+            add( new SecureIndicatingAjaxButton( "page3.button3", "Page3", "Button3" )
+            {
+                @Override
+                protected void onSubmit( AjaxRequestTarget target, Form form )
+                {
+                    info( "Button3 Pressed" );
+                }
+                @Override
+                public void onError( AjaxRequestTarget target, Form form )
+                {
+                    System.out.println( "page3.button3.onError" );
+                }
+                @Override
+                protected void updateAjaxAttributes( AjaxRequestAttributes attributes )
+                {
+                    super.updateAjaxAttributes( attributes );
+                    AjaxCallListener ajaxCallListener = new AjaxCallListener()
+                    {
+                        @Override
+                        public CharSequence getFailureHandler( Component component )
+                        {
+                            return GlobalUtils.WINDOW_LOCATION_REPLACE_LOGIN_LOGIN_HTML;
+                        }
+                    };
+                    attributes.getAjaxCallListeners().add( ajaxCallListener );
+                }
+            } );
+        }
+
     }
 }

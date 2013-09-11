@@ -26,7 +26,7 @@ public class Page1 extends MyBasePage
         {
             super( id );
 
-            add(new Label("label1", "This is in Page1"));
+            add(new Label("label1", "If you see this page, ROLE_TEST1 is activated within your session"));
 
             add( new SecureIndicatingAjaxButton( "page1.button1", "Page1", "Button1" )
             {
