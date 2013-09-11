@@ -1,8 +1,8 @@
 This is free and unencumbered software released into the public domain.
 ___________________________________________________________________________________
 ###################################################################################
-README for Wicket, Java EE and Spring Security Sample
-Last updated: Sep 9, 2013
+README for Wicket, Java EE, Spring and Fortress Security Sample
+Last updated: Sep 10, 2013
 ___________________________________________________________________________________
 ###################################################################################
 # Prerequisites
@@ -13,7 +13,7 @@ ________________________________________________________________________________
 
 ___________________________________________________________________________________
 ###################################################################################
-# Instructions for building and running the sample
+# Instructions for building and running this sample
 ###################################################################################
 1. Download package: https://github.com/shawnmckinney/wicketsecurity/archive/master.zip
 2. Extract
@@ -24,13 +24,13 @@ $ mvn install
 6. Start the Jetty Container
 Classname: com.mycompany.Start
 7. Go to this URL:
-http://localhost:8080/myproject
+http://localhost:8080/myfortressproject
 8. Use the credentials defined in jetty-users.properties
 
 ___________________________________________________________________________________
 ###################################################################################
-# Sample Policy
+# Sample Policy with Fortress
 ###################################################################################
-user1 can view all pages
-user2 can only view Page2
-user3 can only view Page3
+user1 can view all pages but only buttons on Page1
+user2 can only view Page2 and Page2 buttons
+user3 can only view Page3 and Page3 buttons

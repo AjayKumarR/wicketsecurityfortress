@@ -18,7 +18,7 @@ import java.security.Principal;
 import java.util.List;
 
 /**
- * Base class for MyProject.
+ * Base class for MyFortressProject.
  *
  * @author Shawn McKinney
  * @version $Rev$
