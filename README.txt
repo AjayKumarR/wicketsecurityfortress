@@ -10,7 +10,16 @@ ________________________________________________________________________________
 1. Internet access to retrieve dependencies from online Maven repo.
 2. Java SDK Version 7 or beyond installed to target environment
 3. Maven 3 installed to target environment
-
+___________________________________________________________________________________
+###################################################################################
+# Instructions for installing Fortress
+###################################################################################
+1. Download Fortress Quickstart package for Linux from here: http://iamfortress.org/download
+2. Follow steps in README-QUICKSTART.html to install OpenLDAP & Commander
+3. Run the demo policy load.  This is necessary to load test users, roles and permissions to LDAP
+a. copy demo-fortressproject-users.xml TO FORTRESS/ldap/setup
+b. from FORTRESS root run this command:
+./b.sh admin -Dparam1=ldap/setup/demo-fortressproject-users.xml
 ___________________________________________________________________________________
 ###################################################################################
 # Instructions for building and running this sample
@@ -20,13 +29,13 @@ ________________________________________________________________________________
 3. Set JAVA_HOME
 4. Set M2_Home
 5. Run the build from the root package:
-$ mvn install
-6. Start the Jetty Container
-Classname: com.mycompany.Start
-7. Go to this URL:
+$ mvn tomcat:deploy
+6. Go to this URL:
 http://localhost:8080/myfortressproject
-8. Use the credentials defined in jetty-users.properties
-
+7. Use the credentials defined in demo-fortressproject-users.xml (from step installing Fortress step 3):
+user1/password
+user2/password
+user3/password
 ___________________________________________________________________________________
 ###################################################################################
 # Sample Policy with Fortress
