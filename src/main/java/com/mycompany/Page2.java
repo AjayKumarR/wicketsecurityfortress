@@ -17,12 +17,10 @@ public class Page2 extends MyBasePage
     public Page2()
     {
         add( new Page2Form( "pageForm" ) );
-
     }
 
     public class Page2Form extends Form
     {
-
         private static final String PAGE2 = "Page2";
 
         public Page2Form( String id )
@@ -30,7 +28,7 @@ public class Page2 extends MyBasePage
             super( id );
 
             add( new Label( "label2", "This is Page2.  If you see it, ROLE_TEST1 &/or ROLE_TEST2 is activated within " +
-                "your session" ) );
+                "" + "your session" ) );
             add( new SecureIndicatingAjaxButton( "page2.button1", PAGE2, GlobalUtils.BUTTON1 )
             {
                 @Override
@@ -119,6 +117,5 @@ public class Page2 extends MyBasePage
                 }
             } );
         }
-
     }
 }

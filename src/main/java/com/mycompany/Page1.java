@@ -29,7 +29,7 @@ public class Page1 extends MyBasePage
         {
             super( id );
 
-            add(new Label("label1", "If you see this page, ROLE_TEST1 is activated within your session"));
+            add( new Label( "label1", "If you see this page, ROLE_TEST1 is activated within your session" ) );
 
             add( new SecureIndicatingAjaxButton( "page1.button1", PAGE1, GlobalUtils.BUTTON1 )
             {
@@ -38,11 +38,13 @@ public class Page1 extends MyBasePage
                 {
                     info( "Button Pressed" );
                 }
+
                 @Override
                 public void onError( AjaxRequestTarget target, Form form )
                 {
                     System.out.println( "deassign.onError" );
                 }
+
                 @Override
                 protected void updateAjaxAttributes( AjaxRequestAttributes attributes )
                 {
@@ -65,11 +67,13 @@ public class Page1 extends MyBasePage
                 {
                     info( "Button2 Pressed" );
                 }
+
                 @Override
                 public void onError( AjaxRequestTarget target, Form form )
                 {
                     System.out.println( "page1.button2.onError" );
                 }
+
                 @Override
                 protected void updateAjaxAttributes( AjaxRequestAttributes attributes )
                 {
@@ -92,11 +96,13 @@ public class Page1 extends MyBasePage
                 {
                     info( "Button3 Pressed" );
                 }
+
                 @Override
                 public void onError( AjaxRequestTarget target, Form form )
                 {
                     System.out.println( "page1.button3.onError" );
                 }
+
                 @Override
                 protected void updateAjaxAttributes( AjaxRequestAttributes attributes )
                 {
@@ -113,6 +119,5 @@ public class Page1 extends MyBasePage
                 }
             } );
         }
-
     }
 }

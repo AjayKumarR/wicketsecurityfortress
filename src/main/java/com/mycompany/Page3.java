@@ -18,6 +18,7 @@ public class Page3 extends MyBasePage
     {
         add( new Page3Form( "pageForm" ) );
     }
+
     public class Page3Form extends Form
     {
 
@@ -26,7 +27,8 @@ public class Page3 extends MyBasePage
         public Page3Form( String id )
         {
             super( id );
-            add(new Label("label3", "This is Page3.  If you see it, ROLE_TEST1 &/or ROLE_TEST3 is activated within your session"));
+            add( new Label( "label3", "This is Page3.  If you see it, ROLE_TEST1 &/or ROLE_TEST3 is activated within " +
+                "your session" ) );
             add( new SecureIndicatingAjaxButton( "page3.button1", PAGE3, GlobalUtils.BUTTON1 )
             {
                 @Override
@@ -34,11 +36,13 @@ public class Page3 extends MyBasePage
                 {
                     info( "Button1 Pressed" );
                 }
+
                 @Override
                 public void onError( AjaxRequestTarget target, Form form )
                 {
                     System.out.println( "page3.button1" );
                 }
+
                 @Override
                 protected void updateAjaxAttributes( AjaxRequestAttributes attributes )
                 {
@@ -61,11 +65,13 @@ public class Page3 extends MyBasePage
                 {
                     info( "Button2 Pressed" );
                 }
+
                 @Override
                 public void onError( AjaxRequestTarget target, Form form )
                 {
                     System.out.println( "page3.button2.onError" );
                 }
+
                 @Override
                 protected void updateAjaxAttributes( AjaxRequestAttributes attributes )
                 {
@@ -88,11 +94,13 @@ public class Page3 extends MyBasePage
                 {
                     info( "Button3 Pressed" );
                 }
+
                 @Override
                 public void onError( AjaxRequestTarget target, Form form )
                 {
                     System.out.println( "page3.button3.onError" );
                 }
+
                 @Override
                 protected void updateAjaxAttributes( AjaxRequestAttributes attributes )
                 {
@@ -109,6 +117,5 @@ public class Page3 extends MyBasePage
                 }
             } );
         }
-
     }
 }

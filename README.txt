@@ -15,7 +15,8 @@ ________________________________________________________________________________
 # Instructions for installing Fortress
 ###################################################################################
 1. Download Fortress Quickstart package for Linux from here: http://iamfortress.org/download
-2. Follow steps in README-QUICKSTART.html to install OpenLDAP & Commander
+2. Follow steps in README-QUICKSTART.html to install OpenLDAP, Tomcat, & Commander.  Tomcat uses
+Fortress Realm (called Sentry) for container security.
 3. Run the demo policy load.  This is necessary to load test users, roles and permissions to LDAP
 a. copy demo-fortressproject-users.xml TO FORTRESS/ldap/setup
 b. from FORTRESS root run this command:
