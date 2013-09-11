@@ -58,7 +58,7 @@ padding: 12px 45px 4px 45px;
 /* Input boxes - just a bit smaller than normal so they align well. */
 input, textarea, button
 {
-background-color: ;
+/*background-color: ;*/
 color: #000000;
 font-family: verdana, sans-serif;
 }
@@ -197,7 +197,7 @@ background-color: #DDD7CB;
 .titlebg, tr.titlebg th, tr.titlebg td, .titlebg2, tr.titlebg2 th, tr.titlebg2 td
 {
 color: #FFFFFF;
-font-style: bold;
+/*font-style: bold;*/
 background: #636658 repeat-x;
 border-bottom: solid 1px #50563C ;
 border-top: solid 1px #FFFFFF;
@@ -208,7 +208,7 @@ padding-right: 10px;
 {
 font-weight: bold;
 color: white;
-font-style: bold;
+/*font-style: bold;*/
 }
 
 .titlebg a:hover
