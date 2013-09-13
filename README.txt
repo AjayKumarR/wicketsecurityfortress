@@ -22,6 +22,7 @@ of this section.
 *** Note: For this demo you must choose one of the four linux packages as the windows quickstart does not include Tomcat server.
 
 2. Follow these steps: http://www.jts.us/iamfortress/guides/README-QUICKSTART.html:
+http://www.jts.us/iamfortress/guides/README-QUICKSTART.html
 
 *** Note: This guide also in root of Fortress Quickstart download package.
 

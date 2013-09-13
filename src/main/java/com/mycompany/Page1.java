@@ -37,6 +37,7 @@ public class Page1 extends MyBasePage
                 protected void onSubmit( AjaxRequestTarget target, Form form )
                 {
                     info( "Button Pressed" );
+                    target.appendJavaScript(";alert('Page1 Button1 Pressed');");
                 }
 
                 @Override
@@ -66,6 +67,7 @@ public class Page1 extends MyBasePage
                 protected void onSubmit( AjaxRequestTarget target, Form form )
                 {
                     info( "Button2 Pressed" );
+                    target.appendJavaScript(";alert('Page1 Button2 Pressed');");
                 }
 
                 @Override
@@ -95,6 +97,7 @@ public class Page1 extends MyBasePage
                 protected void onSubmit( AjaxRequestTarget target, Form form )
                 {
                     info( "Button3 Pressed" );
+                    target.appendJavaScript(";alert('Page1 Button3 Pressed');");
                 }
 
                 @Override
