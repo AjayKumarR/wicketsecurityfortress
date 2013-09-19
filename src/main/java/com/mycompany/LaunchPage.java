@@ -23,7 +23,10 @@ public class LaunchPage extends MyBasePage
         // needed for container routing:
         if(principal == null)
         {
-            setResponsePage(LoginPage.class);
+            // invalidate the session and force the user to log back on:
+            servletReq.getSession().invalidate();
+            getSession().invalidate();
+            setResponsePage( LoginPage.class );
         }
         add(new Label("label1", "You have access to the link(s) above."));
     }

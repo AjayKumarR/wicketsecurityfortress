@@ -23,7 +23,7 @@ public class Page1 extends MyBasePage
     public class Page1Form extends Form
     {
 
-        private static final String PAGE1 = "Page1";
+        private static final String PAGE1 = "com.mycompany.Page1";
 
         public Page1Form( String id )
         {

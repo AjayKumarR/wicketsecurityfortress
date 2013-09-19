@@ -21,7 +21,7 @@ public class Page2 extends MyBasePage
 
     public class Page2Form extends Form
     {
-        private static final String PAGE2 = "Page2";
+        private static final String PAGE2 = "com.mycompany.Page2";
 
         public Page2Form( String id )
         {
